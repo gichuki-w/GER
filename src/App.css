@@ -1,0 +1,103 @@
+:root {
+  --bg-cl: rgb(255, 255, 255);
+  --bg: linear-gradient(135deg, rgba(131,58,180,1) 0%, rgba(134,57,40,1) 50%, rgba(108,42,97,1) 100%);
+  --bg2: radial-gradient(circle, rgba(20,0,36,1) 0%, rgba(120,46,190,1) 61%, rgba(106,0,255,1) 100%);
+  --txt-cl: rgb(255, 255, 255);
+  --pri-font: 'Raleway', 'Roboto', sans-serif;
+  --line-clr: rgb(139, 114, 114);
+
+}
+.App {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-cl);
+  background: var(--bg);
+  font-family: var(--pri-font);
+  color: var(--txt-cl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  position: relative;
+  background-size: 500%;
+  background-position: left;
+  animation: bg-ani 50s infinite alternate;
+  -webkit-animation: bg-ani 50s infinite alternate;
+}
+@keyframes bg-ani {
+  0% {background-position: left;}
+  100% {background-position: right;}
+}
+
+.square {
+  height: 15rem;
+  width: 20rem;
+  border: 1px solid var(--line-clr);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.square p {
+  padding: 1rem;
+  margin: 0;
+}
+.form-input {
+  margin: 0;
+  position: relative;
+
+  padding: 1rem;
+}
+.form-input label {
+  /* position: absolute; */
+  margin-right: 1rem;
+}
+.form-input input {
+  font-size: 1em;
+  border: 0;
+  border-bottom: 1px solid var(--line-clr);
+  outline: 0;
+  background: transparent;
+  padding: 0.4rem;
+  caret-color: var(--txt-cl);
+  color: var(--txt-cl);
+}
+.form-input input:hover {
+  border-bottom: 1px solid white;
+  
+}
+.form-input input:focus {
+ outline: 0; 
+}
+.form-input button {
+  padding: 0.3rem;
+  margin: 0.3rem;
+  background: var(--bg);
+  color: var(--txt-cl);
+  border: 1px solid var(--line-clr);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  background-size: 500%;
+  background-position: left;
+  animation: bg-ani 20s infinite alternate;
+  -webkit-animation: bg-ani 20s infinite alternate;
+}
+.form-input button:hover {
+  border-color: var(--txt-cl);
+  cursor: pointer;
+}
+.form-input button:focus {
+  outline: 0;
+
+}
